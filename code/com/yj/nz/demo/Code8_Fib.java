@@ -1,23 +1,22 @@
-package com.yj.nz.leetcode;
+package com.yj.nz.demo;
 
 import java.util.Scanner;
 
 /**
- * ClassName:_509
- * Package:com.yj.nz.leetcode
+ * ClassName:Code8_Fib
+ * Package:com.yj.nz.need
  * Description:描述
  *
- * @Date:2022/9/21 18:19
+ * @Date:2022/9/21 18:15
  * @Author:NieZheng
  * @Version:1.0
  */
-
-
 /*
-* 509.斐波那契数列
-*       斐波那契数列指的是这样一个数列：1、1、2、3、5、8、13、21、34,又称兔子数列
-* */
-public class _509 {
+ * 509.斐波那契数列
+ *   斐波那契数 （通常用F(n)表示）形成的序列称为 斐波那契数列，该数列由 `0` 和 `1` 开始，后面的每一项数字都是前面两项数字的和
+ *    例如：1、1、2、3、5、8、13、21、34,又称兔子数列
+ * */
+public class Code8_Fib {
 
     // 方式一：递归法
     //O(2^n)
@@ -55,5 +54,4 @@ public class _509 {
         System.out.println(fib1(n));
         System.out.println(fib2(n));
     }
-
 }
