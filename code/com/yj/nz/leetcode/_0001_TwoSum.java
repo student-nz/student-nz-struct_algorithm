@@ -2,6 +2,9 @@ package com.yj.nz.leetcode;
 
 import java.util.HashMap;
 
+/*
+* 给定一个整数数组 `nums` 和一个整数目标值 `target`，请你在该数组中找出和为目标值target 的那 两个整数，并返回它们的数组下标
+* */
 public class _0001_TwoSum {
 
 	public static int[] twoSum(int[] nums, int target) {
