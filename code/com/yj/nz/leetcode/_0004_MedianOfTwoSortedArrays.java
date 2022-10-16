@@ -8,90 +8,52 @@ package com.yj.nz.leetcode;
 
 public class _0004_MedianOfTwoSortedArrays {
 
-	public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-		int size = nums1.length + nums2.length;
-		boolean even = (size & 1) == 0;
-		if (nums1.length != 0 && nums2.length != 0) {
-			if (even) {
-				return (double) (findKthNum(nums1, nums2, size / 2) + findKthNum(nums1, nums2, size / 2 + 1)) / 2D;
-			} else {
-				return findKthNum(nums1, nums2, size / 2 + 1);
-			}
-		} else if (nums1.length != 0) {
-			if (even) {
-				return (double) (nums1[(size - 1) / 2] + nums1[size / 2]) / 2;
-			} else {
-				return nums1[size / 2];
-			}
-		} else if (nums2.length != 0) {
-			if (even) {
-				return (double) (nums2[(size - 1) / 2] + nums2[size / 2]) / 2;
-			} else {
-				return nums2[size / 2];
-			}
+	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+		int totalLen = nums1.length + nums2.length;
+		//中位数位置
+		int k = (int) (totalLen + 1) / 2 ;
+		//偶数
+		if(totalLen % 2 == 0) {
+			double mid = (getMinK(nums1, nums2, k) + getMinK(nums1, nums2, k + 1)) / 2;
+			return mid;
 		} else {
-			return 0;
+			//奇数
+			double mid = getMinK(nums1, nums2, k);
+			return mid;
 		}
 	}
 
-	public static int findKthNum(int[] arr1, int[] arr2, int kth) {
-		int[] longs = arr1.length >= arr2.length ? arr1 : arr2;
-		int[] shorts = arr1.length < arr2.length ? arr1 : arr2;
-		int l = longs.length;
-		int s = shorts.length;
-		if (kth <= s) {
-			return getUpMedian(shorts, 0, kth - 1, longs, 0, kth - 1);
-		}
-		if (kth > l) {
-			if (shorts[kth - l - 1] >= longs[l - 1]) {
-				return shorts[kth - l - 1];
-			}
-			if (longs[kth - s - 1] >= shorts[s - 1]) {
-				return longs[kth - s - 1];
-			}
-			return getUpMedian(shorts, kth - l, s - 1, longs, kth - s, l - 1);
-		}
-		// 第2段
-		if (longs[kth - s - 1] >= shorts[s - 1]) {
-			return longs[kth - s - 1];
-		}
-		return getUpMedian(shorts, 0, s - 1, longs, kth - s, kth - 1);
-	}
+	private double getMinK(int[] nums1, int[] nums2, int k){
 
-	public static int getUpMedian(int[] A, int s1, int e1, int[] B, int s2, int e2) {
-		int mid1 = 0;
-		int mid2 = 0;
-		while (s1 < e1) {
-			mid1 = (s1 + e1) / 2;
-			mid2 = (s2 + e2) / 2;
-			if (A[mid1] == B[mid2]) {
-				return A[mid1];
+		int len1 = nums1.length, len2 = nums2.length;
+		int index1 = 0, index2 = 0;
+
+		while(true){
+			//边界情况
+			//若A数组已经遍历完了，则当前指向B数组的指针再往后移k-1步，就是所求
+			if(index1 == len1){
+				return nums2[index2 + k - 1];
 			}
-			if (((e1 - s1 + 1) & 1) == 1) { // 奇数长度
-				if (A[mid1] > B[mid2]) {
-					if (B[mid2] >= A[mid1 - 1]) {
-						return B[mid2];
-					}
-					e1 = mid1 - 1;
-					s2 = mid2 + 1;
-				} else { // A[mid1] < B[mid2]
-					if (A[mid1] >= B[mid2 - 1]) {
-						return A[mid1];
-					}
-					e2 = mid2 - 1;
-					s1 = mid1 + 1;
-				}
-			} else { // 偶数长度
-				if (A[mid1] > B[mid2]) {
-					e1 = mid1;
-					s2 = mid2 + 1;
-				} else {
-					e2 = mid2;
-					s1 = mid1 + 1;
-				}
+
+			if(index2 == len2){
+				return nums1[index1 + k - 1];
+			}
+
+			if(k == 1){
+				return Math.min(nums1[index1], nums2[index2]);
+			}
+
+			int mid = k / 2;
+			int newIndex1 = Math.min(len1, index1 + mid) - 1;
+			int newIndex2 = Math.min(len2, index2 + mid) - 1;
+			int p1 = nums1[newIndex1], p2 = nums2[newIndex2];
+			if(p1 <= p2){
+				k -= (newIndex1 - index1 + 1);
+				index1 = newIndex1 + 1;
+			} else {
+				k -= (newIndex2 - index2 + 1);
+				index2 = newIndex2 + 1;
 			}
 		}
-		return Math.min(A[s1], B[s2]);
 	}
-
 }
