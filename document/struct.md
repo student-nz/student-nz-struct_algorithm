@@ -44,7 +44,7 @@
 
 ​		根据情况, 可以空间换时间或时间换空间
 
-# 二、模拟手写ArrayList动态数组
+# 二、模拟手写ArrayList
 
 # 三、模拟手写List、AbstractList、SingleLinkedList
 
