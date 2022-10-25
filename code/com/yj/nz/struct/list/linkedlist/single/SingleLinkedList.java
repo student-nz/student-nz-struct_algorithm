@@ -2,6 +2,10 @@ package com.yj.nz.list.linkedlist.single;
 
 import com.yj.nz.list.linkedlist.AbstractList;
 
+/**
+ * 模拟底层手写SingleLinkedList
+ * @param <E>
+ */
 public class SingleLinkedList<E> extends AbstractList<E> {
 	private Node<E> first;
 	

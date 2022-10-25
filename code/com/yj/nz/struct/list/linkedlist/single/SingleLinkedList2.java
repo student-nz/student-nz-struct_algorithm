@@ -3,9 +3,7 @@ package com.yj.nz.list.linkedlist.single;
 import com.yj.nz.list.linkedlist.AbstractList;
 
 /**
- * 增加一个虚拟头结点
- * @author MJ Lee
- *
+ * 模拟底层手写SingleLinkedList，增加一个虚拟头结点
  * @param <E>
  */
 public class SingleLinkedList2<E> extends AbstractList<E> {

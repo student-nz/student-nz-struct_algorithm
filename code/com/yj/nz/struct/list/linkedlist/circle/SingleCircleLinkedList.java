@@ -2,6 +2,10 @@ package com.yj.nz.list.linkedlist.circle;
 
 import com.yj.nz.list.linkedlist.AbstractList;
 
+/**
+ * 模拟底层手写SingleCircleLinkedList
+ * @param <E>
+ */
 public class SingleCircleLinkedList<E> extends AbstractList<E> {
 	private Node<E> first;
 	

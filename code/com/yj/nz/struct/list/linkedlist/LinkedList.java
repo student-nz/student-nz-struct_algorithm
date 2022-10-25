@@ -1,7 +1,9 @@
 package com.yj.nz.list.linkedlist;
 
-import com.yj.nz.list.linkedlist.AbstractList;
-
+/**
+ * 模拟底层手写LinkedList
+ * @param <E>
+ */
 public class LinkedList<E> extends AbstractList<E> {
 	private Node<E> first;
 	private Node<E> last;

@@ -1,5 +1,9 @@
 package com.yj.nz.list.linkedlist;
 
+/**
+ * 模拟底层手写AbstractList
+ * @param <E>
+ */
 public abstract class AbstractList<E> implements List<E>  {
 	/**
 	 * 元素的数量

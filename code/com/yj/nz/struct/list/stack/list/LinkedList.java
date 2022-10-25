@@ -1,5 +1,10 @@
 package com.yj.nz.list.stack.list;
 
+/**
+ * 模拟底层手写LinkedList
+ * @param <E>
+ */
+
 public class LinkedList<E> extends AbstractList<E> {
 	private Node<E> first;
 	private Node<E> last;

@@ -1,8 +1,12 @@
 package com.yj.nz.list.stack;
 
-import com.yj.nz.list.stack.list.ArrayList;
 import com.yj.nz.list.stack.list.List;
+import com.yj.nz.list.stack.list.ArrayList;
 
+/**
+ * 模拟底层手写Stack
+ * @param <E>
+ */
 public class Stack<E> {
 
 	private List<E> list = new ArrayList<>();

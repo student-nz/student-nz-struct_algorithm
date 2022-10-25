@@ -1,5 +1,9 @@
 package com.yj.nz.list.queue.circle;
 
+/**
+ * 模拟底层手写CircleDeque
+ * @param <E>
+ */
 @SuppressWarnings("unchecked")
 public class CircleDeque<E> {
 	private int front;

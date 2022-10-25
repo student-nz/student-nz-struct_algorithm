@@ -1,9 +1,12 @@
 package com.yj.nz.list.queue;
 
-
 import com.yj.nz.list.queue.list.LinkedList;
 import com.yj.nz.list.queue.list.List;
 
+/**
+ * 模拟底层手写Deque
+ * @param <E>
+ */
 public class Deque<E> {
 	private List<E> list = new LinkedList<>();
 	

@@ -1,5 +1,9 @@
 package com.yj.nz.list.linkedlist;
 
+/**
+ * 模拟底层手写List
+ * @param <E>
+ */
 public interface List<E> {
 	static final int ELEMENT_NOT_FOUND = -1;
 	/**
