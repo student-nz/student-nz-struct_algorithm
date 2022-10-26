@@ -1,4 +1,4 @@
-package com.yj.nz.binarytree.binarysearch.printer;
+package com.yj.nz.binarytree.binarysearch01.printer;
 
 public abstract class Printer {	
 	/**

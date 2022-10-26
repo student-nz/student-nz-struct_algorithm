@@ -1,4 +1,4 @@
-package com.yj.nz.binarytree.binarysearch.tree;
+package com.yj.nz.binarytree.binarysearch02.tree;
 
 import java.util.Comparator;
 

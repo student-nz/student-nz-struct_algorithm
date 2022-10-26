@@ -1,4 +1,4 @@
-package com.yj.nz.binarytree.binarysearch.printer;
+package com.yj.nz.binarytree.binarysearch02.printer;
 
 import java.util.ArrayList;
 import java.util.Collection;

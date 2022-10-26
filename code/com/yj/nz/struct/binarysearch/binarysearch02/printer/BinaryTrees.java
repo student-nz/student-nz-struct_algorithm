@@ -1,4 +1,4 @@
-package com.yj.nz.binarytree.binarysearch.printer;
+package com.yj.nz.binarytree.binarysearch02.printer;
 
 /**
  * 

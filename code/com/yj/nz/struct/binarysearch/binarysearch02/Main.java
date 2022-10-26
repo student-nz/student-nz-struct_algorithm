@@ -1,7 +1,7 @@
-package com.yj.nz.binarytree.binarysearch;
+package com.yj.nz.binarytree.binarysearch02;
 
-import com.yj.nz.binarytree.binarysearch.printer.BinaryTrees;
-import com.yj.nz.binarytree.binarysearch.tree.BST;
+import com.yj.nz.binarytree.binarysearch02.printer.BinaryTrees;
+import com.yj.nz.binarytree.binarysearch02.tree.BST;
 
 @SuppressWarnings("unused")
 public class Main {

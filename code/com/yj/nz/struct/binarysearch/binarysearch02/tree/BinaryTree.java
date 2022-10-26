@@ -1,8 +1,8 @@
-package com.yj.nz.binarytree.binarysearch.tree;
+package com.yj.nz.binarytree.binarysearch02.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import com.yj.nz.binarytree.binarysearch.printer.BinaryTreeInfo;
+import com.yj.nz.binarytree.binarysearch02.printer.BinaryTreeInfo;
 
 @SuppressWarnings("unchecked")
 public class BinaryTree<E> implements BinaryTreeInfo {

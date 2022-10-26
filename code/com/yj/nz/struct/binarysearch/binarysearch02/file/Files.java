@@ -1,4 +1,4 @@
-package com.yj.nz.binarytree.binarysearch.file;
+package com.yj.nz.binarytree.binarysearch02.file;
 
 import java.io.BufferedWriter;
 import java.io.File;
