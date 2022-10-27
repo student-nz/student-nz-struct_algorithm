@@ -66,7 +66,7 @@ public class Main {
 		
 		String str = BinaryTrees.printString(bst);
 		str += "\n";
-		Files.writeToFile("F:/1.txt", str, true);
+		Files.writeToFile("D:/1.txt", str, true);
 		
 		// BinaryTrees.println(bst);
 	}

@@ -132,73 +132,73 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
 		return null;
 	}
 	
-//	/**
-//	 * 前序遍历
-//	 */
-//	public void preorderTraversal() {
-//		preorderTraversal(root);
-//	}
-//	
-//	private void preorderTraversal(Node<E> node) {
-//		if (node == null) return;
-//		
-//		System.out.println(node.element);
-//		preorderTraversal(node.left);
-//		preorderTraversal(node.right);
-//	}
-//	
-//	/**
-//	 * 中序遍历
-//	 */
-//	public void inorderTraversal() {
-//		inorderTraversal(root);
-//	}
-//	
-//	private void inorderTraversal(Node<E> node) {
-//		if (node == null) return;
-//		
-//		inorderTraversal(node.left);
-//		System.out.println(node.element);
-//		inorderTraversal(node.right);
-//	}
-//	
-//	/**
-//	 * 后序遍历
-//	 */
-//	public void postorderTraversal() {
-//		postorderTraversal(root);
-//	}
-//	
-//	private void postorderTraversal(Node<E> node) {
-//		if (node == null) return;
-//
-//		postorderTraversal(node.left);
-//		postorderTraversal(node.right);
-//		System.out.println(node.element);
-//	}
-//	
-//	/**
-//	 * 层序遍历
-//	 */
-//	public void levelOrderTraversal() {
-//		if (root == null) return;
-//		
-//		Queue<Node<E>> queue = new LinkedList<>();
-//		queue.offer(root);
-//		
-//		while (!queue.isEmpty()) {
-//			Node<E> node = queue.poll();
-//			System.out.println(node.element);
-//			
-//			if (node.left != null) {
-//				queue.offer(node.left);
-//			}
-//			
-//			if (node.right != null) {
-//				queue.offer(node.right);
-//			}
-//		}
-//	}
+	/**
+	 * 前序遍历
+	 */
+	public void preorderTraversal() {
+		preorderTraversal(root);
+	}
+
+	private void preorderTraversal(Node<E> node) {
+		if (node == null) return;
+
+		System.out.println(node.element);
+		preorderTraversal(node.left);
+		preorderTraversal(node.right);
+	}
+
+	/**
+	 * 中序遍历
+	 */
+	public void inorderTraversal() {
+		inorderTraversal(root);
+	}
+
+	private void inorderTraversal(Node<E> node) {
+		if (node == null) return;
+
+		inorderTraversal(node.left);
+		System.out.println(node.element);
+		inorderTraversal(node.right);
+	}
+
+	/**
+	 * 后序遍历
+	 */
+	public void postorderTraversal() {
+		postorderTraversal(root);
+	}
+
+	private void postorderTraversal(Node<E> node) {
+		if (node == null) return;
+
+		postorderTraversal(node.left);
+		postorderTraversal(node.right);
+		System.out.println(node.element);
+	}
+
+	/**
+	 * 层序遍历
+	 */
+	public void levelOrderTraversal() {
+		if (root == null) return;
+
+		Queue<Node<E>> queue = new LinkedList<>();
+		queue.offer(root);
+
+		while (!queue.isEmpty()) {
+			Node<E> node = queue.poll();
+			System.out.println(node.element);
+
+			if (node.left != null) {
+				queue.offer(node.left);
+			}
+
+			if (node.right != null) {
+				queue.offer(node.right);
+			}
+		}
+	}
 	
 	public void preorder(Visitor<E> visitor) {
 		if (visitor == null) return;
@@ -287,33 +287,6 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
 		
 		return true;
 	}
-	
-//	public boolean isComplete() {
-//		if (root == null) return false;
-//		
-//		Queue<Node<E>> queue = new LinkedList<>();
-//		queue.offer(root);
-//		
-//		boolean leaf = false;
-//		while (!queue.isEmpty()) {
-//			Node<E> node = queue.poll();
-//			if (leaf && !node.isLeaf()) return false;
-//
-//			if (node.left != null && node.right != null) {
-//				queue.offer(node.left);
-//				queue.offer(node.right);
-//			} else if (node.left == null && node.right != null) {
-//				return false;
-//			} else { // 后面遍历的节点都必须是叶子节点
-//				leaf = true;
-//				if (node.left != null) {
-//					queue.offer(node.left);
-//				}
-//			}
-//		}
-//		
-//		return true;
-//	}
 	
 	public int height() {
 		if (root == null) return 0;
